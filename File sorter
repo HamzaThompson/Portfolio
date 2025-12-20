@@ -1,0 +1,47 @@
+import os
+import shutil
+
+# --- Step 1: Define file type categories ---
+FILE_TYPES = {
+    "Images": [".jpg", ".jpeg", ".png", ".gif", ".bmp"],
+    "Documents": [".pdf", ".docx", ".txt", ".xlsx", ".pptx"],
+    "Audio": [".mp3", ".wav", ".m4a"],
+    "Video": [".mp4", ".mov", ".avi"],
+    "Archives": [".zip", ".rar", ".tar", ".gz"],
+    "Code": [".py", ".js", ".html", ".css"],
+    "Others": []
+}
+
+# --- Step 2: Ask user for folder path ---
+folder_path = input("Enter the path of the folder you want to organize: ").strip()
+
+if not os.path.exists(folder_path):
+    print("The folder path does not exist. Please try again.")
+    exit()
+
+# --- Step 3: Create destination folders if they don't exist ---
+for folder in FILE_TYPES.keys():
+    new_folder = os.path.join(folder_path, folder)
+    if not os.path.exists(new_folder):
+        os.makedirs(new_folder)
+
+# --- Step 4: Sort and move files ---
+for file_name in os.listdir(folder_path):
+    file_path = os.path.join(folder_path, file_name)
+
+    if os.path.isfile(file_path):
+        _, extension = os.path.splitext(file_name)
+        moved = False
+
+        for category, extensions in FILE_TYPES.items():
+            if extension.lower() in extensions:
+                shutil.move(file_path, os.path.join(folder_path, category, file_name))
+                print(f"Moved: {file_name} → {category}")
+                moved = True
+                break
+
+        if not moved:
+            shutil.move(file_path, os.path.join(folder_path, "Others", file_name))
+            print(f"Moved: {file_name} → Others")
+
+print("\n✅ All files have been organized successfully!")
