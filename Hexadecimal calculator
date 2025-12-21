@@ -1,0 +1,51 @@
+# Function to convert denary to hexadecimal
+def denary_to_hex(denary):
+    return hex(denary)[2:].upper()
+
+
+# Function to convert hexadecimal to denary
+def hex_to_denary(hex_value):
+    # int(value, base) converts a number from a given base to denary
+    return int(hex_value, 16)
+
+
+# Main program loop
+while True:
+    print("\nHexadecimal Calculator")
+    print("1. Denary to Hexadecimal")
+    print("2. Hexadecimal to Denary")
+    print("3. Exit")
+
+    choice = input("Choose an option (1/2/3): ")
+
+    # Option 1: Denary to Hexadecimal
+    if choice == "1":
+        denary_input = input("Enter a denary number: ")
+
+        # Check if the input is a valid positive integer
+        if denary_input.isdigit():
+            denary_number = int(denary_input)
+            hex_result = denary_to_hex(denary_number)
+            print(f"Hexadecimal value: {hex_result}")
+        else:
+            print("Error: Please enter a valid denary number.")
+
+    # Option 2: Hexadecimal to Denary
+    elif choice == "2":
+        hex_input = input("Enter a hexadecimal number: ")
+
+        try:
+            denary_result = hex_to_denary(hex_input)
+            print(f"Denary value: {denary_result}")
+        except ValueError:
+            # This runs if the hex value is invalid
+            print("Error: Please enter a valid hexadecimal number.")
+
+    # Option 3: Exit program
+    elif choice == "3":
+        print("Goodbye!")
+        break
+
+    # Invalid menu option
+    else:
+        print("Invalid choice. Please select 1, 2, or 3.")
