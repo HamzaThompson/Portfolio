@@ -1,0 +1,57 @@
+def calculate_us_tax(income):
+
+    tax = 0
+
+    # The below section shows tax brackets first and tax amount second
+    brackets = [
+        (11000, 0.10),
+        (44725, 0.12),
+        (95375, 0.22),
+        (182100, 0.24),
+        (231250, 0.32),
+        (578125, 0.35),
+        (float("inf"), 0.37)
+    ]
+
+    previous_limit = 0
+
+    # Loops through each bracket once
+
+    for limit, rate in brackets:
+
+        # If the income is over the limit only the amount in the limit is taxed
+        # The tax is added to tax
+        # Updates previous limit for the new bracket
+
+        if income > limit:
+            taxable_amount = limit - previous_limit
+            tax += taxable_amount * rate
+            previous_limit = limit
+
+        # If the tax falls within a bracket, the loop breaks
+
+        else:
+            taxable_amount = income - previous_limit
+            tax += taxable_amount * rate
+            break
+
+
+    # Tax is recalled
+     
+    return tax
+
+
+# ---- MAIN PROGRAM ----
+# Asks user for their income
+income = float(input("Enter your annual income in USD: "))
+
+# Calls the function to calculate tax
+
+tax_owed = calculate_us_tax(income)
+after_tax_income = income - tax_owed
+
+# Prints the results with 2 decimal places
+
+print(f"\nAnnual Income: ${income:,.2f}")
+print(f"Federal Tax Owed: ${tax_owed:,.2f}")
+print(f"Income After Tax: ${after_tax_income:,.2f}")
