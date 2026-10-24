@@ -1,16 +1,25 @@
-Hi, I'm Hamza 👋
-I'm a computer science student learning HTML and building practical projects to solve real problems.
+# Hi, I'm Hamza 👋
+
+I'm a self-taught web developer based in London. I completed a BTEC Level 3 in IT at Merton College (2024 to 2026) and build practical projects that solve real problems. I'm looking for junior web developer, IT support and apprenticeship roles.
+
+🌐 **Portfolio:** [hamza-thompson-github-io.vercel.app](https://hamza-thompson-github-io.vercel.app)
 
 ## 🧰 Skills
-- HTML, CSS, Java script
-- Git & GitHub
+- HTML, CSS and JavaScript
+- Git and GitHub
+- Responsive and accessible web design
 
 ## 💼 Projects
-- [Personal Website] https://hamza-thompson-github-io.vercel.app - Personal website, displays my skills and projects with an email system built in.
-- [Ledgr] https://ledgr-zeta-one.vercel.app - Finance tracker, tracks income, expenses and savings.
-- [Schedule] https://schedule-nine-rouge.vercel.app - my take at a calender website.
-- [Ritual] (Not live yet) - Habit tracker, tracks daily, weekly and monthly goals with a streak feature.
-- And more (See porfolio projects repo for a full list of projects)
+- **[Personal Website](https://hamza-thompson-github-io.vercel.app):** a portfolio site showing my skills and projects, with a working contact form.
+  - *Built with:* HTML, CSS, JavaScript, Formspree (contact form)
+- **[Cadence](https://cadence-theta-three.vercel.app):** a personal productivity dashboard with a daily schedule, tasks, habit tracking and a journal.
+  - *Built with:* HTML, CSS, JavaScript
+- **[Ledgr](https://ledgr-zeta-one.vercel.app):** a finance dashboard that tracks revenue, expenses and savings by month, with annual charts and CSV and PDF export.
+  - *Built with:* HTML, CSS, JavaScript
+- **[Schedule](https://schedule-nine-rouge.vercel.app):** my take on a calendar website.
+  - *Built with:* HTML, CSS, JavaScript
+- **Eventually Profitable:** an investment forecaster where you enter each instrument's weighting, volatility and annual growth, then run a Monte Carlo simulation to see a range of possible outcomes.
+  - *Built with:* HTML, CSS, JavaScript
 
 ## 📫 Contact
-📧 hamzarthompson@gmail.com | 🌐 [LinkedIn] https://www.linkedin.com/in/hamza-thompson-8b4a8938a
+📧 hamzarthompson@gmail.com | 🔗 [LinkedIn](https://www.linkedin.com/in/hamza-thompson-8b4a8938a) | 📄 [Download my CV](Hamza_Thompson_CV.pdf)
